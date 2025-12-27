@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <title>RevisitPhysics/mainpage</title>
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="Flav.png">
+
+    </head>
+    <body>
+        <div id="header-slot"></div>
+    
+    <main class="page" id="pageMain">   
+        
+        
+        
+        
+<div id="mp-topicbar">
+  <h1 id="bob1">AS-Physics</h1>
+
+  <div class="topics-row">
+    <div class="dropdown-wrap">
+        <button class="mp-topicbutton" id="T1">Topic 1<br>Numbers and Units <img class="tinyL" src="Numbers.png" alt="N%Us"> </button>
+        <div id="dropmenu" class="dropdown">
+            <button class="dmdown" id="st1T1">Index and Standard Form</button>
+            <button class="dmdown" id="st2T1">Units and Quantities</button>
+            <button class="dmdown" id="st3T1">Decimal Places and Rounding</button>
+            <button class="dmdown" id="st4T1">Significant Figures</button>
+        </div>
+    </div>
+    <button class="mp-topicbutton" id="T2">Topic 2<br></button>
+    <button class="mp-topicbutton" id="T3">Topic 3<br></button>
+    <button class="mp-topicbutton" id="T4">Topic 4<br></button>
+    <button class="mp-topicbutton" id="T5">Topic 5<br></button>
+
+    </div>
+  </div>
+</div>
+<div id="QuizBar">
+    <button id="Quizb">Quizzes</button>
+</div>
+
+        <script src="Logic.js"></script>
+        <script>
+        fetch("header.html")
+        .then(r => r.text())
+        .then(html => document.getElementById("header-slot").innerHTML = html);
+        </script>
+    </main> 
+
+</body>
+
+
+
+</html>

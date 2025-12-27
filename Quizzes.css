@@ -1,0 +1,144 @@
+* { box-sizing: border-box; }
+* {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#startQuiz{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: rgb(21, 209, 162);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position:relative;
+    top:80px;
+    height: 20%;
+    width: 300px;
+    border-radius: 13px;
+}
+#startQuiz:hover{
+    background-color: rgb(10, 65, 65);
+    scale: 0.95;
+}
+.hidden {display: none;
+}
+
+#Question1{
+    position: relative;
+    background-color: white;
+    width: min(90vw, 750px);
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    
+}
+.Qtext{
+    font-size: large;
+    padding: 20px;
+}
+.Qoption{
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: medium;
+    background-color: rgb(38, 198, 198);
+    color: white;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+}
+.Qoption:hover{
+    background-color: rgb(30, 181, 181);
+    scale: 0.95;
+}
+#Q1{
+    padding-top: 20px;
+}
+#Question2{
+    position: relative;
+    background-color: white;
+    width: min(90vw, 750px);
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    
+}
+.Question{
+    position: relative;
+    background-color: white;
+    width: min(90vw, 750px);
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;}
+
+#Q3text2{
+    font-size: 14px;
+    padding: 20px;
+}
+
+#Question3{
+    height: min(90vw, 600px);
+}
+
+.chosen{
+    background-color: rgb(17, 121, 121);
+    color: white;
+}
+
+.SubmitButton{
+    padding: 20px 20px;
+    font-size:medium;
+    background-color: rgb(21, 209, 162);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+.SubmitButton:hover{
+    background-color: rgb(10, 65, 65);
+    scale: 0.95;
+}
+.chosen:hover{
+    background-color: rgb(9, 101, 155);
+    scale: 0.95;
+}
+
+
+
+#Quize1
+{
+    position: relative;
+    top: 20px;
+}
+#SeeResults{
+    top: 60px;
+    position: relative;
+    padding: 20px 20px;
+    font-size:medium;
+    background-color: rgb(21, 209, 162);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 200px;
+}
+#SeeResults:hover{
+    background-color: rgb(10, 65, 65);
+    scale: 0.95;
+}
