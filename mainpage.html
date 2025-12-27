@@ -41,14 +41,23 @@
     <button id="Quizb">Quizzes</button>
 </div>
 
-        <script src="Logic.js"></script>
+        
         <script>
-        fetch("header.html")
-        .then(r => r.text())
-        .then(html => document.getElementById("header-slot").innerHTML = html);
-        </script>
-    </main> 
+    fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+    document.getElementById("header-slot").innerHTML = html;
 
+    
+    const s = document.createElement("script");
+    s.src = "Logic.js";
+    document.body.appendChild(s);
+  });
+</script>
+    
+    </main> 
+        
+       
 </body>
 
 

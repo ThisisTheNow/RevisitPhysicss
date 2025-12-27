@@ -276,6 +276,7 @@ text-decoration: none;
   background-color: rgb(9, 101, 155);
   color: white;
   scale: 0.95;
+  cursor:pointer
 }
 
 #pageMain{
@@ -310,4 +311,79 @@ text-decoration: none;
 .goodfont{
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+
+#rtm {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: medium;
+  background-color: rgb(247, 247, 247);
+  color: rgb(18, 156, 166);
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;}
+
+
+.Uinputs{
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  padding: 23px;
+  font-size: medium;
+  background-color: rgb(247, 247, 247);
+  color: rgb(18, 156, 166);
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-top:40px;
+}
+
+
+#Resa
+{
+  position:relative;
+  
+  
+  
+  margin: 10px auto;
+  padding: px;
+  font-size: medium;
+  
+  color: rgb(247, 247, 247);
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-top:40px;
+}
+#loginMain
+{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px; /* important so it can stop content going under the bar */
+  height: 700px;
+  width: 700px;
+  background-color: rgb(17, 186, 161);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 38px;
+  margin-bottom: 180px;
+  top: 100px;
+}
+
+.logoL
+  {width: min(70vw, 180px);
+  height:auto}
+
+
+.RegLogBtn {
+  height: 55px;
+  width: 160px;
+  border-radius: 12px;
+  background-color: rgb(21, 209, 162);
+  color:white;
+  border:none;
 }

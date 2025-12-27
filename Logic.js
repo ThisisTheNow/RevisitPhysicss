@@ -39,3 +39,5 @@ function makeitdisappear(elementID, triggerid) {
         }
 
 makeitdisappear("pageIandSFQuiz", "startQuiz");
+goTopage("loginredirect", "login.html");
+goTopage("rtm", "mainpage.html");
