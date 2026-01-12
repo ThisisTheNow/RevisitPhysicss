@@ -28,7 +28,7 @@ function shuffleAnswers(boxID) {
 const CHECK_URL = "https://revisitphysics.onrender.com/check";
 const MULTI_SELECT = new Set([3]);
 
-let score = 0;
+let cos = 0;
 let currentQuestion = 1;
 
 async function checkWithServer(question, answer) {
@@ -84,7 +84,7 @@ function endQuiz() {
   unhide("QuizEnd");
 
   const scoreEl = document.getElementById("FinalScore");
-  if (scoreEl) scoreEl.textContent = String(score);
+  if (scoreEl) scoreEl.textContent = String(cos);
 }
 
 function setupAnswerButtons() {
@@ -104,7 +104,7 @@ function setupAnswerButtons() {
 
       try {
         const data = await checkWithServer(q, a);
-        if (data.correct) score++;
+        if (data.correct) cos++;
         goNext();
       } catch (err) {
         console.error(err);
@@ -131,7 +131,7 @@ function setupSubmitButtons() {
 
       try {
         const data = await checkWithServer(q, answers);
-        if (data.correct) score++;
+        if (data.correct) cos++;
         goNext();
       } catch (err) {
         console.error(err);
@@ -142,7 +142,7 @@ function setupSubmitButtons() {
 }
 
 function quizstarted() {
-  score = 0;
+   cos = 0;
   currentQuestion = 1;
   showQuestion(currentQuestion);
 }
