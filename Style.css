@@ -397,6 +397,7 @@ text-decoration: none;
 #loginMessage {
   margin-top: 20px;
   font-size: medium;
-  color: red;
+  color: rgb(246, 253, 255);
+  padding: 10px;
 }
 
