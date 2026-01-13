@@ -39,5 +39,46 @@ function makeitdisappear(elementID, triggerid) {
         }
 
 makeitdisappear("pageIandSFQuiz", "startQuiz");
-goTopage("loginredirect", "login.html");
+goTopage("LoginBtnHeader", "login.html");
 goTopage("rtm", "mainpage.html");
+
+
+
+const logoutBtnO = document.getElementById("LogoutBtnHeader")
+logoutBtnO?.addEventListener("click", () => {
+  localStorage.removeItem("userId");
+  window.location.href = "login.html";
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const userId = Number(localStorage.getItem("userId"));
+
+  const loginBtn = document.getElementById("LoginBtnHeader"); 
+  const logoutBtn = document.getElementById("LogoutBtnHeader"); 
+  if (Number.isInteger(userId)) {
+    
+    loginBtn?.classList.add("hidden");    
+    logoutBtn?.classList.remove("hidden");
+    const UsernameHeader = document.getElementById("UsernameHeader");
+    fetch(`https://revisitphysics.onrender.com/user?userId=${userId}`)
+    .then(r => r.json())
+    .then(data => {
+    if (data && UsernameHeader) {
+        UsernameHeader.textContent = data.username;
+    }
+    else {
+        console.error("User data not found or UsernameHeader is missing.");}
+    }).catch(err => {
+    console.error("Failed to load user:", err);
+    });
+} 
+    else {
+    
+    loginBtn?.classList.remove("hidden");
+    logoutBtn?.classList.add("hidden");
+    
+    
+}
+
+});
+

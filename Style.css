@@ -394,3 +394,9 @@ text-decoration: none;
   scale: 0.95;
   cursor:pointer
 }
+#loginMessage {
+  margin-top: 20px;
+  font-size: medium;
+  color: red;
+}
+
