@@ -27,7 +27,7 @@ function shuffleAnswers(boxID) {
 
 const CHECK_URL = "https://revisitphysics.onrender.com/check";
 const MULTI_SELECT = new Set([3, 6, 9]);
-
+let quizName = "IandSF"
 let cos = 0;
 let currentQuestion = 1;
 
@@ -99,7 +99,7 @@ function endQuiz() {
 
   const scoreEl = document.getElementById("FinalScore");
   if (scoreEl) scoreEl.textContent = String(cos);
-  saveProgress("IandSF", cos, totalQuestions);
+  saveProgress(quizName, cos, totalQuestions);
 }
 
 function setupAnswerButtons() {
