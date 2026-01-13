@@ -95,6 +95,14 @@
     height: min(90vw, 600px);
 }
 
+#Question6{
+    height: min(90vw, 650px);
+}
+
+#Question9{
+    height: min(90vw, 650px);
+}
+
 .chosen{
     background-color: rgb(17, 121, 121);
     color: white;
