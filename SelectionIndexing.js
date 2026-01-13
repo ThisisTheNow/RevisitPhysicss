@@ -26,7 +26,7 @@ function shuffleAnswers(boxID) {
 }
 
 const CHECK_URL = "https://revisitphysics.onrender.com/check";
-const MULTI_SELECT = new Set([3]);
+const MULTI_SELECT = new Set([3, 6, 9]);
 
 let cos = 0;
 let currentQuestion = 1;
