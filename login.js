@@ -11,12 +11,13 @@ registerBtn.addEventListener("click", async () => {
     const username = usernameInput.value;
     const password = passwordInput.value;
     //Where the register login is done
+    registerBtn.disabled = true;
     fetch("https://revisitphysics.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password })
     }).then(async (r) => {
-    registerBtn.disabled = true;
+    
     const text = await r.json();
     const message = document.getElementById("loginMessage");
 
