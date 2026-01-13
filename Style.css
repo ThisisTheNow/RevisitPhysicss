@@ -401,3 +401,7 @@ text-decoration: none;
   padding: 10px;
 }
 
+#UsernameHeader {
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
