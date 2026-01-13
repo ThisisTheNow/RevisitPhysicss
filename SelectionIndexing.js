@@ -42,6 +42,20 @@ async function checkWithServer(question, answer) {
   return res.json();
 }
 
+
+function saveProgress(quizId, score, total) {
+  const userId = Number(localStorage.getItem("userId"));
+  if (!Number.isInteger(userId)) return;
+
+  return fetch("https://revisitphysics.onrender.com/progress/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ userId, quizId, score, total })
+  });
+}
+
+totalQuestions = 10; 
+
 function questionId(n) {
   return `Question${n}`;
 }
@@ -85,6 +99,7 @@ function endQuiz() {
 
   const scoreEl = document.getElementById("FinalScore");
   if (scoreEl) scoreEl.textContent = String(cos);
+  saveProgress(IandSF, cos, totalQuestions);
 }
 
 function setupAnswerButtons() {
