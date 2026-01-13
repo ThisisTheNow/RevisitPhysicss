@@ -99,7 +99,7 @@ function endQuiz() {
 
   const scoreEl = document.getElementById("FinalScore");
   if (scoreEl) scoreEl.textContent = String(cos);
-  saveProgress(IandSF, cos, totalQuestions);
+  saveProgress("IandSF", cos, totalQuestions);
 }
 
 function setupAnswerButtons() {
