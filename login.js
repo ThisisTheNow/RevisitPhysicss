@@ -34,7 +34,30 @@ registerBtn.addEventListener("click", async () => {
   message.textContent = "Network/server error";
   message.classList.remove("hidden");
   registerBtn.disabled = false;
-    message.classList.remove("hidden");
     });
 
+});
+
+loginBtn.addEventListener("click", async () => {
+    loginBtn.disabled = true;
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+    fetch("https://revisitphysics.onrender.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({username,password})
+      }).then(async (r) => {
+        const data = await r.json();
+        if (data.ok){
+        localStorage.setItem("userId", data.userId);
+        window.location.href = "mainpage.html";}
+        else {
+          const message = document.getElementById("loginMessage");
+          message.textContent = "Login Failed: " + (data.error || "Unknown error");
+          message.classList.remove("hidden");
+          loginBtn.disabled = false;
+        }
+      })
 });
