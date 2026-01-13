@@ -388,3 +388,9 @@ text-decoration: none;
   border:none;
 }
 .hidden {display: none;}
+.RegLogBtn:hover{
+  background-color: rgb(9, 101, 155);
+  color: white;
+  scale: 0.95;
+  cursor:pointer
+}
