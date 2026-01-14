@@ -45,7 +45,7 @@ function makeitdisappear(elementID, triggerid) {
 makeitdisappear("pageIandSFQuiz", "startQuiz");
 goTopage("LoginBtnHeader", "login.html");
 goTopage("rtm", "mainpage.html");
-goTopage("QuitBtn", "Quizzes.html");
+goTopage("QuitB", "Quizzes.html");
 
 
 
