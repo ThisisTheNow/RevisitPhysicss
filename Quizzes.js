@@ -47,7 +47,7 @@ async function continuousUpdate(spanId, quizName) {
     
   }
 }
-continuousUpdate("iandSFScore", "iandSF");
+continuousUpdate("IandSFScore", "IandSF");
 setInterval(() => {
-  continuousUpdate("iandSFScore", "iandSF");
+  continuousUpdate("IandSFScore", "IandSF");
 }, 5000);
