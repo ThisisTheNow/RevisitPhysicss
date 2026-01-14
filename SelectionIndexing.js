@@ -29,7 +29,7 @@ function shuffleAnswers(boxID) {
 
 const CHECK_URL = "https://revisitphysics.onrender.com/check";
 const MULTI_SELECT = new Set([3, 6, 9]);
-quizName = "IandSF"
+let quizName = "IandSF"
 let cos = 0;
 let currentQuestion = 1;
 
@@ -70,7 +70,7 @@ async function saveProgress(quizId, score, total) {
   console.log("saveProgress response:", res.status, data);
 }
 
-totalQuestions = 10; 
+let totalQuestions = 10; 
 
 function questionId(n) {
   return `Question${n}`;
