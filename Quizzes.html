@@ -32,6 +32,12 @@
     
     const logic = document.createElement("script");
     logic.src = "Logic.js";
+    logic.onload = () => {
+      goTopage("IandSFQuizBtn", "iandsfselectionquiz.html");
+      goTopage("UnitsQuantitiesQuizBtn", "unitsandquantitiesselectionquiz.html");
+      goTopage("DecPlacesRoundingQuizBtn", "decimalplacesroundingselectionquiz.html");
+      goTopage("SignificantFiguresQuizBtn", "significantfiguresselectionquiz.html");
+    };
     document.body.appendChild(logic);
 
     
@@ -44,12 +50,6 @@
     
     <script>
         src="Quizzes.js"
-    </script>
-    <script>
-        goTopage("IandSFQuizBtn", "iandsfselectionquiz.html");
-        goTopage("UnitsQuantitiesQuizBtn", "unitsandquantitiesselectionquiz.html");
-        goTopage("DecPlacesRoundingQuizBtn", "decimalplacesroundingselectionquiz.html");
-        goTopage("SignificantFiguresQuizBtn", "significantfiguresselectionquiz.html");
     </script>
     
     </body>
