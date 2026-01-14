@@ -59,7 +59,7 @@ async function saveProgress(quizId, score, total) {
     console.log("Not saving progress: invalid score/total:", score, total);
     return;
   }
-
+  console.log("SENDING:", { userId, quizId, score, total });
   const res = await fetch("https://revisitphysics.onrender.com/progress/save", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
