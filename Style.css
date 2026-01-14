@@ -405,3 +405,25 @@ text-decoration: none;
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
+
+#pageQuizzes{
+  padding-top: 64px; /* important so it can stop content going under the bar */
+  height: 1000px;
+  width: 1300px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 38px;
+  margin-bottom: 180px;
+  top: 100px;
+  align-items: center;
+  text-align: center;}
+
+#QuizTitle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(17, 121, 121);}

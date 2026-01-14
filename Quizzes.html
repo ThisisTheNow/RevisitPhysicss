@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title>RevisitPhysics/Quizzes</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="Quizzes.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="Flav.png">
+    </head>
+    <body>
+        <div id="header-slot"></div>
+    
+    <main class="page" id="pageQuizzes">   
+        <h1 class="goodfont" id="QuizTitle">Quizzes</h1>
+        <p class="goodfont" id="Quizu1">Select a quiz to test your knowledge</p>
+        
+        <div class="QuizContainer">
+            <p class="goodfont QuizName" id="IandSFQuiz">Indexing and Standard Form Quiz <br> <span class="ShowScoreSpan">Latest Score: <span id="IandSFScore">N/A</span> </p>
+            <p class="AttemptPara">Last time you attempted this: <span id="IandSFLastAttempt">N/A</span></p>
+            <button class="QuizButtons" id="IandSFQuizBtn">Take Quiz</button>
+            
+        </div>
+        
+    </main>
+    
+    <script>
+    fetch("header.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("header-slot").innerHTML = html;
+
+    
+    const logic = document.createElement("script");
+    logic.src = "Logic.js";
+    document.body.appendChild(logic);
+
+    
+    const headerScript = document.createElement("script");
+    headerScript.src = "header.js";
+    headerScript.onload = () => updateHeader();
+    document.body.appendChild(headerScript);
+  });
+    </script>
+    
+    <script>
+        goTopage("IandSFQuizBtn", "iandsfselectionquiz.html");
+        goTopage("UnitsQuantitiesQuizBtn", "unitsandquantitiesselectionquiz.html");
+        goTopage("DecPlacesRoundingQuizBtn", "decimalplacesroundingselectionquiz.html");
+        goTopage("SignificantFiguresQuizBtn", "significantfiguresselectionquiz.html");
+    </script>
+    
+    </body>

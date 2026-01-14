@@ -1,4 +1,8 @@
 
+window.quizName = "";
+window.totalQuestions = 0;
+
+
 
 function goTopage(buttonID, pageURL) {
     const button = document.getElementById(buttonID);
@@ -41,7 +45,7 @@ function makeitdisappear(elementID, triggerid) {
 makeitdisappear("pageIandSFQuiz", "startQuiz");
 goTopage("LoginBtnHeader", "login.html");
 goTopage("rtm", "mainpage.html");
-
+goTopage("QuitBtn", "Quizzes.html");
 
 
 
