@@ -45,15 +45,29 @@ async function checkWithServer(question, answer) {
 }
 
 
-function saveProgress(quizId, score, total) {
-  const userId = Number(localStorage.getItem("userId"));
-  if (!Number.isInteger(userId)) return;
+async function saveProgress(quizId, score, total) {
+  const userIdStr = localStorage.getItem("userId");
+  const userId = Number(userIdStr);
 
-  return fetch("https://revisitphysics.onrender.com/progress/save", {
+  if (!Number.isInteger(userId) || userId <= 0) {
+    console.log("Not saving progress: invalid userId:", userIdStr);
+    return;
+  }
+
+  //make sure score/total are numbers
+  if (!Number.isInteger(score) || !Number.isInteger(total)) {
+    console.log("Not saving progress: invalid score/total:", score, total);
+    return;
+  }
+
+  const res = await fetch("https://revisitphysics.onrender.com/progress/save", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ userId, quizId, score, total })
   });
+
+  const data = await res.json();
+  console.log("saveProgress response:", res.status, data);
 }
 
 totalQuestions = 10; 
